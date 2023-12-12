@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Columns & Flexbox</title>
+        <style>
+            article{
+                column-count: 3;
+                column-gap: 40px;
+                /* column-rule-style: solid;
+                column-rule-width: 1px;
+                column-rule-color: coral; */
+                column-rule: 1px solid coral;
+            }
+
+            article h1{
+                column-span: all;
+            }
+
+            .textbox1{
+                border: 2px solid;
+                padding: 20px;
+                width: 300px;
+                overflow: auto;
+                resize: both;
+            }
+
+            .textbox2{
+                margin: 20px;
+                padding: 10px;
+                width: 300px;
+                height: 100px;
+                border: 1px solid black;
+                outline: 1px solid red;
+                outline-offset: 10px;
+            }
+
+            .flex-container{
+                display: flex;
+                justify-content: space-around;
+                width: 400px;
+                height: 250px;
+                background-color: #000000;
+            }
+
+            .flex-item{
+                background-color: lightblue;
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+            }
+
+            .first{
+                order: -1;
+            }
+        </style>
+    </head>
+    <body>
+        <article>
+            <h1>Article Title</h1>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora doloremque quia voluptas fuga optio? Enim, iste? Numquam non consequuntur, nisi maiores iste, reiciendis aut illum eum minus architecto totam perferendis! Placeat, totam reprehenderit itaque error a alias animi corrupti tenetur mollitia, neque saepe ducimus cum id illum dicta iure omnis doloribus facere obcaecati repellendus voluptates cumque eligendi temporibus. Harum numquam obcaecati fugiat esse, itaque exercitationem consequuntur in ullam dolores consequatur explicabo ex ad recusandae libero maiores tempora quibusdam aliquid perspiciatis accusamus expedita sapiente ratione. Vitae distinctio laudantium aliquid enim ipsam quae eum repudiandae culpa doloremque expedita nisi, iste, totam in.
+        </article>
+
+        <br>
+
+        <div class="textbox1">Try and resize this element</div>
+        <div class="textbox2">This element has a 10px outline</div>
+
+        <!--Flexbox basically consist of flex contain with some flex items inside and the flex container bsically defines how the flex items are layed out-->
+
+        <div class="flex-container">
+            <div class="flex-item">flex item 1</div>
+            <div class="flex-item first">flex item 2</div>
+            <div class="flex-item">flex item 3</div>
+
+
+        </div>
+
+    </body>
+</html>
